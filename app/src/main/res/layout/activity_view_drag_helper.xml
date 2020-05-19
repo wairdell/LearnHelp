@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.wairdell.learnhelp.draghelper.SimpleDragHelperView android:layout_width="200dp"
+                                                            android:layout_height="200dp"
+                                                            android:background="#FFFF00">
+
+        <View android:layout_width="30dp" android:layout_height="30dp"
+              android:background="#FF0000"/>
+
+
+    </com.wairdell.learnhelp.draghelper.SimpleDragHelperView>
+
+    <com.wairdell.learnhelp.draghelper.TopDragHelperLayout android:layout_width="match_parent"
+                                                           android:layout_height="match_parent">
+
+    </com.wairdell.learnhelp.draghelper.TopDragHelperLayout>
+</LinearLayout>

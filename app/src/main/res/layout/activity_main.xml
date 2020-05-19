@@ -16,4 +16,13 @@
             android:text="Interpolator"
             android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
+    <Button android:id="@+id/btn_xfermode"
+            android:text="xfermode"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btn_drag_helper"
+            android:text="ViewDragHelper"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
 </LinearLayout>
