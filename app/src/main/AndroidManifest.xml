@@ -21,6 +21,7 @@
         <activity android:name=".interpolator.InterpolatorActivity" />
         <activity android:name=".xfermode.XfermodeActivity" />
         <activity android:name=".draghelper.ViewDragHelperActivity" />
+        <activity android:name=".recycler.RecyclerViewActivity" />
     </application>
 
 </manifest>

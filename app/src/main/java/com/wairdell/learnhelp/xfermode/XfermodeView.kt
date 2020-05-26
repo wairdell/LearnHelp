@@ -72,16 +72,17 @@ class XfermodeView(context: Context?, attrs: AttributeSet?) : View(context, attr
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        parent.requestDisallowInterceptTouchEvent(true)
         if (event?.action == MotionEvent.ACTION_DOWN) {
             touchPath.reset()
-            touchPath.moveTo(event?.x, event?.y)
+            touchPath.moveTo(event.x, event.y)
             return true
         } else if (event?.action == MotionEvent.ACTION_MOVE) {
-            touchPath.lineTo(event?.x, event?.y)
+            touchPath.lineTo(event.x, event.y)
         }
         maskCanvas?.drawPath(touchPath, paint)
         invalidate()
-        return super.onTouchEvent(event)
+        return true
     }
 
 }
