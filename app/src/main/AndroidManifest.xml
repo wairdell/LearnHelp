@@ -22,6 +22,8 @@
         <activity android:name=".xfermode.XfermodeActivity" />
         <activity android:name=".draghelper.ViewDragHelperActivity" />
         <activity android:name=".recycler.RecyclerViewActivity" />
+        <activity android:name=".coordinator.CoordinatorLayoutActivity" />
+        <activity android:name=".colormatrix.ColorMatrixActivity" />
     </application>
 
 </manifest>

@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.wairdell.learnhelp.bessel.BesselDemoActivity
+import com.wairdell.learnhelp.colormatrix.ColorMatrixActivity
+import com.wairdell.learnhelp.coordinator.CoordinatorLayoutActivity
 import com.wairdell.learnhelp.draghelper.ViewDragHelperActivity
 import com.wairdell.learnhelp.interpolator.InterpolatorActivity
 import com.wairdell.learnhelp.recycler.RecyclerViewActivity
@@ -22,5 +24,6 @@ class MainActivity : AppCompatActivity() {
         btn_xfermode.setOnClickListener { startActivity(Intent(MainActivity@this, XfermodeActivity::class.java)) }
         btn_drag_helper.setOnClickListener { startActivity(Intent(MainActivity@this, ViewDragHelperActivity::class.java)) }
         btn_recycler_view.setOnClickListener { startActivity(Intent(MainActivity@this, RecyclerViewActivity::class.java)) }
+        btn_color_matrix.setOnClickListener { startActivity(Intent(MainActivity@this, ColorMatrixActivity::class.java)) }
     }
 }

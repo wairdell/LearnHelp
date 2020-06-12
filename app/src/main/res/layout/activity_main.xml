@@ -27,5 +27,11 @@
 
     <Button android:id="@+id/btn_recycler_view"
             android:text="RecyclerView" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_coordinator_layout"
+            android:text="CoordinatorLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/btn_color_matrix"
+            android:text="ColorMatrix" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
