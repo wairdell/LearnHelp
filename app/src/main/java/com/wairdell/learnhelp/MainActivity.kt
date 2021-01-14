@@ -1,18 +1,19 @@
 package com.wairdell.learnhelp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
 import com.wairdell.learnhelp.bessel.BesselDemoActivity
 import com.wairdell.learnhelp.colormatrix.ColorMatrixActivity
-import com.wairdell.learnhelp.coordinator.CoordinatorLayoutActivity
 import com.wairdell.learnhelp.draghelper.ViewDragHelperActivity
 import com.wairdell.learnhelp.interpolator.InterpolatorActivity
+import com.wairdell.learnhelp.jetpack.paging.PagingSampleActivity
+import com.wairdell.learnhelp.kodein.KodeinSampleActivity
+import com.wairdell.learnhelp.kodein.KodeinSampleFragment
 import com.wairdell.learnhelp.recycler.RecyclerViewActivity
 import com.wairdell.learnhelp.xfermode.XfermodeActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,5 +26,8 @@ class MainActivity : AppCompatActivity() {
         btn_drag_helper.setOnClickListener { startActivity(Intent(MainActivity@this, ViewDragHelperActivity::class.java)) }
         btn_recycler_view.setOnClickListener { startActivity(Intent(MainActivity@this, RecyclerViewActivity::class.java)) }
         btn_color_matrix.setOnClickListener { startActivity(Intent(MainActivity@this, ColorMatrixActivity::class.java)) }
+        btn_jetpack_paging.setOnClickListener { startActivity(Intent(MainActivity@this, PagingSampleActivity::class.java)) }
+        btn_kodein_sample.setOnClickListener { startActivity(Intent(MainActivity@this, KodeinSampleActivity::class.java)) }
     }
+
 }

@@ -16,6 +16,7 @@ import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wairdell.learnhelp.recycler.SimpleAdapter
+import com.wairdell.learnhelp.recycler.SimpleViewHolder
 
 
 class ColorMatrixActivity : AppCompatActivity() {

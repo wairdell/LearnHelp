@@ -15,10 +15,11 @@ class NumberAdapter : SimpleAdapter<Int>(R.layout.item_recycler_view) {
         data = list
     }
 
-    override fun onBindViewHolder(holder: SimpleAdapter.SimpleViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SimpleViewHolder, position: Int) {
         var random = Random()
         var bg = Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255))
         holder.itemView.setBackgroundColor(bg)
         holder.getView<TextView>(R.id.tv_number)?.text = getItem(position).toString()
     }
+
 }

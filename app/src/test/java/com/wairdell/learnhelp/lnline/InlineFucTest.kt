@@ -108,6 +108,18 @@ class InlineFucTest {
         student2 = Student()
     }
 
+    inline fun sample(block: Student.() -> Unit) {
+        var student = Student()
+        student.apply(block)
+    }
+
+    fun sampleCall() {
+        sample {
+            name = "xxxx"
+        }
+    }
+
+
 
 
 }

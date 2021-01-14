@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
@@ -8,30 +7,65 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <Button android:id="@+id/btn_bessel"
+    <com.wairdell.learnhelp.widget.LayoutWidget
+            android:background="#33000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    <Button
+            android:id="@+id/btn_bessel"
             android:text="贝塞尔曲线"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/btn_interpolator"
+    <Button
+            android:id="@+id/btn_interpolator"
             android:text="Interpolator"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/btn_xfermode"
+    <Button
+            android:id="@+id/btn_xfermode"
             android:text="xfermode"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     <Button
             android:id="@+id/btn_drag_helper"
             android:text="ViewDragHelper"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/btn_recycler_view"
-            android:text="RecyclerView" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <Button android:id="@+id/btn_coordinator_layout"
-            android:text="CoordinatorLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btn_recycler_view"
+            android:text="RecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/btn_color_matrix"
-            android:text="ColorMatrix" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btn_coordinator_layout"
+            android:text="CoordinatorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <Button
+            android:id="@+id/btn_color_matrix"
+            android:text="ColorMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <Button
+            android:text="Kodein Sample"
+            android:id="@+id/btn_kodein_sample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <Button
+            android:text="JETPACK PAGING"
+            android:id="@+id/btn_jetpack_paging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
 </LinearLayout>
