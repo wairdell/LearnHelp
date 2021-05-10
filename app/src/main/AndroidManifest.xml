@@ -27,6 +27,7 @@
         <activity android:name=".colormatrix.ColorMatrixActivity" />
         <activity android:name=".kodein.KodeinSampleActivity" />
         <activity android:name=".jetpack.paging.PagingSampleActivity" />
+        <activity android:name=".compose.ComposeDemoActivity" />
     </application>
 
 </manifest>

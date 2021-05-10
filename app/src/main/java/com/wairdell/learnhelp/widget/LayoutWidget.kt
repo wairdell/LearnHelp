@@ -22,13 +22,14 @@ class LayoutWidget(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
 
     private val textWidth = 800
 
-    constructor(context: Context?, attrs: AttributeSet?): this(context, attrs, 0)
+    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
 
-    constructor(context: Context?): this(context, null)
+    constructor(context: Context?) : this(context, null)
 
     init {
         mPaint.color = Color.RED
-        mPaint.textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 14f, resources.displayMetrics)
+        mPaint.textSize =
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 14f, resources.displayMetrics)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             mLayout = StaticLayout.Builder.obtain(showText, 0, showText.length, mPaint, textWidth).build()
         } else {
@@ -39,12 +40,11 @@ class LayoutWidget(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val widthSpecMode = MeasureSpec.getMode(widthMeasureSpec)
         val heightSpecMode = MeasureSpec.getMode(heightMeasureSpec)
-        if(widthSpecMode == MeasureSpec.AT_MOST && heightSpecMode == MeasureSpec.AT_MOST) {
-            setMeasuredDimension(200, mLayout.height)
-        } else if(widthSpecMode == MeasureSpec.AT_MOST) {
-            setMeasuredDimension(200, getDefaultSize(suggestedMinimumHeight, heightMeasureSpec)
-            )
-        } else if(heightSpecMode == MeasureSpec.AT_MOST) {
+        if (widthSpecMode == MeasureSpec.AT_MOST && heightSpecMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(mLayout.width, mLayout.height)
+        } else if (widthSpecMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(mLayout.width, getDefaultSize(suggestedMinimumHeight, heightMeasureSpec))
+        } else if (heightSpecMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(getDefaultSize(suggestedMinimumWidth, widthMeasureSpec), mLayout.height)
         } else {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec)
