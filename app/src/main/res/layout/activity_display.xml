@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <com.wairdell.learnhelp.widget.FillTypeView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+    <com.wairdell.learnhelp.widget.CameraView
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    <com.wairdell.learnhelp.widget.AnimatorView
+            android:background="#ff00ff"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    <com.wairdell.learnhelp.widget.TickView
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    <com.wairdell.learnhelp.widget.CheckView
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+    <ImageView
+            android:background="@drawable/xlx_voice_landing_redpacket_progress_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+
+</com.google.android.material.chip.ChipGroup>

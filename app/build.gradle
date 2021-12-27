@@ -30,12 +30,12 @@ android {
     }
 
     buildFeatures {
-        compose true//并在应用的 build.gradle 文件中启用 Jetpack Compose
+//        compose true//并在应用的 build.gradle 文件中启用 Jetpack Compose
     }
-    composeOptions {
+    /*composeOptions {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion kotlin_version
-    }
+    }*/
 
 }
 
@@ -58,9 +58,9 @@ dependencies {
     implementation 'org.kodein.di:kodein-di-framework-android-x:6.4.1'
     implementation 'org.kodein.di:kodein-di-framework-android-core:6.4.1'
 
-    implementation "androidx.compose.ui:ui:$compose_version"
+    /*implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.ui:ui-tooling:$compose_version"
+    implementation "androidx.ui:ui-tooling:$compose_version"*/
 
 
 }
