@@ -12,11 +12,20 @@ import org.kodein.di.generic.singleton
 
 class App : Application(), KodeinAware {
 
+    companion object {
+        private lateinit var context : Application
+    }
+
     override val kodein: Kodein by Kodein.lazy {
         bind<Context>() with singleton { this@App }
         import(androidCoreModule(this@App))
         import(androidXModule(this@App))
         import(kodeinSampleModule)
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        context = this
     }
 
 }

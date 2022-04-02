@@ -9,6 +9,7 @@
             android:layout_height="100dp" />
 
     <com.wairdell.learnhelp.widget.CameraView
+            android:background="#00FF00"
             android:layout_width="100dp"
             android:layout_height="100dp" />
 

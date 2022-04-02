@@ -22,4 +22,10 @@
         <attr name="haloInsertEdge" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="UnderlinedTextView" >
+        <attr name="underlineWidth" format="dimension" />
+        <attr name="underlineColor" format="color" />
+        <attr name="underlineBottomMargin" format="dimension" />
+    </declare-styleable>
+
 </resources>

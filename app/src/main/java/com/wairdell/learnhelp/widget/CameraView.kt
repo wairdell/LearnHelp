@@ -1,13 +1,12 @@
 package com.wairdell.learnhelp.widget
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
-import android.graphics.BitmapFactory
-import android.graphics.Camera
-import android.graphics.Canvas
-import android.graphics.Paint
+import android.graphics.*
 import android.util.AttributeSet
+import android.util.DisplayMetrics
 import android.view.View
 import android.view.animation.LinearInterpolator
 import com.wairdell.learnhelp.R
@@ -27,7 +26,7 @@ class CameraView @JvmOverloads constructor(
     private val bitmap = BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher)
     private val paint = Paint()
     private val camera = Camera()
-    private val animator = ObjectAnimator.ofFloat(this, "degree", 0F, 180F)
+    private val animator = AnimatorSet()
 
     var degree = 0F
         set(value) {
@@ -35,35 +34,62 @@ class CameraView @JvmOverloads constructor(
             invalidate()
         }
 
+
+    var rotateDegree = 10F
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     init {
-        animator.duration = 2500
-        animator.interpolator = LinearInterpolator()
-        animator.repeatCount = ValueAnimator.INFINITE
-        animator.repeatMode = ValueAnimator.REVERSE
+        val animator1 = ObjectAnimator.ofFloat(this, "degree", 0F, 70F).apply {
+            duration = 1500
+            interpolator = LinearInterpolator()
+            //repeatCount = ValueAnimator.INFINITE
+            //repeatMode = ValueAnimator.REVERSE
+        }
+
+        val animator2 = ObjectAnimator.ofFloat(this, "rotateDegree", 0F, 270F).apply {
+            duration = 2500
+            interpolator = LinearInterpolator()
+            //repeatCount = ValueAnimator.INFINITE
+            //repeatMode = ValueAnimator.REVERSE
+        }
+
+        animator.playSequentially(animator1, animator2)
+        //animator.repeatCount = ValueAnimator.INFINITE
+
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        animator.start()
+        //animator.start()
     }
 
-    override fun onAnimationEnd() {
-        super.onAnimationEnd()
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
         animator.end()
     }
+
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         val centerY = height / 2
         val fl = (width - bitmap.width) / 2F
+        val ft = (height - bitmap.height) / 2F
 
         canvas.save()
+        val py = bitmap.height / 2F
+        val px = width / 2F
+        canvas.rotate(-rotateDegree, px, py)
         canvas.clipRect(0, 0, width, centerY)
-        canvas.drawBitmap(bitmap, fl, (height - bitmap.height) / 2F, paint)
+        canvas.rotate(rotateDegree, px, py)
+        canvas.drawBitmap(bitmap, fl, ft, paint)
         canvas.restore()
 
         canvas.save()
+        canvas.rotate(-rotateDegree, px, py)
         if (degree < 90) {
             canvas.clipRect(0, centerY, width, height)
         } else {
@@ -74,10 +100,12 @@ class CameraView @JvmOverloads constructor(
         canvas.translate(width / 2F, height / 2F)
         camera.applyToCanvas(canvas)
         canvas.translate(width / -2F, height / -2F)
-        canvas.drawBitmap(bitmap, fl, (height - bitmap.height) / 2F, paint)
+        canvas.rotate(rotateDegree, px, py)
+        canvas.drawBitmap(bitmap, fl, ft, paint)
         camera.restore()
 
         canvas.restore()
+
     }
 
 

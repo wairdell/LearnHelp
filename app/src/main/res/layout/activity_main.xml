@@ -6,80 +6,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <com.google.android.material.chip.ChipGroup
-            android:focusableInTouchMode="true"
-            android:focusable="true"
-            android:id="@+id/root"
+
+    <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".MainActivity">
+            android:layout_height="wrap_content">
 
-        <Button
-                android:id="@+id/btn_bessel"
-                android:text="贝塞尔曲线"
+        <TextView
+                android:textColor="#C60000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/tv_image"
+                android:background="@drawable/xlx_voice_multiple_reward_loading_download_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/btn_interpolator"
-                android:text="Interpolator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        <com.google.android.material.chip.ChipGroup
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:id="@+id/root"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
-        <Button
-                android:id="@+id/btn_xfermode"
-                android:text="xfermode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_bessel"
+                    android:text="贝塞尔曲线"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/btn_drag_helper"
-                android:text="ViewDragHelper"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_interpolator"
+                    android:text="Interpolator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/btn_recycler_view"
-                android:text="RecyclerView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_xfermode"
+                    android:text="xfermode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/btn_coordinator_layout"
-                android:text="CoordinatorLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_drag_helper"
+                    android:text="ViewDragHelper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/btn_color_matrix"
-                android:text="ColorMatrix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_recycler_view"
+                    android:text="RecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:text="Kodein Sample"
-                android:id="@+id/btn_kodein_sample"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_coordinator_layout"
+                    android:text="CoordinatorLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:text="JETPACK PAGING"
-                android:id="@+id/btn_jetpack_paging"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_color_matrix"
+                    android:text="ColorMatrix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:text="Compose Sample"
-                android:id="@+id/btn_compose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                    android:text="Kodein Sample"
+                    android:id="@+id/btn_kodein_sample"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        <Button
-                android:text="自定义 View"
-                android:id="@+id/btn_display"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-    </com.google.android.material.chip.ChipGroup>
+            <Button
+                    android:text="JETPACK PAGING"
+                    android:id="@+id/btn_jetpack_paging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <Button
+                    android:text="Compose Sample"
+                    android:id="@+id/btn_compose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            <Button
+                    android:text="自定义 View"
+                    android:id="@+id/btn_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </LinearLayout>
+
 
 </ScrollView>
