@@ -1,23 +1,13 @@
 package com.wairdell.learnhelp
 
-import android.animation.ValueAnimator
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.style.BackgroundColorSpan
-import android.text.style.DynamicDrawableSpan
-import android.text.style.ForegroundColorSpan
-import android.text.style.ImageSpan
-import android.widget.ImageView
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.set
 import com.wairdell.learnhelp.bessel.BesselDemoActivity
+import com.wairdell.learnhelp.bridge.SaFormater
 import com.wairdell.learnhelp.colormatrix.ColorMatrixActivity
 import com.wairdell.learnhelp.compose.ComposeDemoActivity
 import com.wairdell.learnhelp.coordinator.CoordinatorLayoutActivity
@@ -29,6 +19,8 @@ import com.wairdell.learnhelp.kodein.KodeinSampleActivity
 import com.wairdell.learnhelp.recycler.RecyclerViewActivity
 import com.wairdell.learnhelp.xfermode.XfermodeActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.collections.HashMap
+import kotlin.collections.set
 
 
 class MainActivity : AppCompatActivity() {
@@ -50,17 +42,20 @@ class MainActivity : AppCompatActivity() {
         var tvImage = findViewById<TextView>(R.id.tv_image)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             tvImage.setOnClickListener {
-                /*ValueAnimator.ofInt(0, 100).apply {
-                    duration = 4000
-                    addUpdateListener {
-                        tvImage.text =  it.animatedValue.toString() + "%"
-                        ProgressDrawableHelper.setProgress(tvImage, it.animatedValue as Int)
-                    }
-                    start()
-                }*/
-                ProgressDrawableHelper.setGlitter(tvImage);
+                var hashMap = HashMap<String, Any>()
+                hashMap["xx111"] = "cc"
+                hashMap["cc222"] = "bbb"
+                hashMap["9oionbh"] = "bbb"
+                hashMap["zzzccc"] = "bbb"
+                hashMap["ssdd"] = "bbb"
+                hashMap["ffcc"] = "bbb"
+                hashMap["123"] = "bbb"
+                hashMap["334"] = "bbb"
+                Log.e("TAG", "startTime = " + System.currentTimeMillis());
+                SaFormater().format(hashMap)
+                Log.e("TAG", "endTime = " + System.currentTimeMillis());
+                Log.e("TAG", "sign = " + hashMap.get("sign"));
             }
-
         };
     }
 
