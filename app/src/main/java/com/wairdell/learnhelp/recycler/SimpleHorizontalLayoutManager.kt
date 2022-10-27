@@ -45,8 +45,8 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
         //判断是左滑还是右滑,小于0是左滑
         if (dx < 0) {
             //获取当前recyclerView中第一个itemView
-            var childView = getChildAt(0) ?: return 0
-            var childViewPosition = getPosition(childView)
+            val childView = getChildAt(0) ?: return 0
+            val childViewPosition = getPosition(childView)
             //如果第一itemView的position为0时，则没有前一个元素
             if (childViewPosition == 0) {
                 resultDx = if (childView.left < 0) Math.max(childView.left, dx) else 0
@@ -55,12 +55,12 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
                 resultDx = dx
             } else {
                 //不为0，则有前一个元素，获取前一个位置的itemView
-                var newChildView = recycler.getViewForPosition(childViewPosition - 1)
+                val newChildView = recycler.getViewForPosition(childViewPosition - 1)
                 //添加到recyclerView第一个位置
                 addView(newChildView, 0)
                 measureChildWithMargins(newChildView, 0, 0)
-                var newChildViewWidth = getDecoratedMeasuredWidth(newChildView)
-                var newChildViewHeight = getDecoratedMeasuredHeight(newChildView)
+                val newChildViewWidth = getDecoratedMeasuredWidth(newChildView)
+                val newChildViewHeight = getDecoratedMeasuredHeight(newChildView)
                 //根据新的itemView测量宽高将itemView布局到之前一个itemView的左边
                 layoutDecoratedWithMargins(
                     newChildView,
@@ -72,8 +72,8 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
                 resultDx = dx
             }
         } else {
-            var childView = getChildAt(childCount - 1) ?: return 0
-            var childViewPosition = getPosition(childView)
+            val childView = getChildAt(childCount - 1) ?: return 0
+            val childViewPosition = getPosition(childView)
             //如果第一itemView的position为最后一个，则没有下一个元素
             if (childViewPosition == itemCount - 1) {
                 //限制最后一个滑动位置
@@ -83,12 +83,12 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
                 resultDx = dx
             } else {
                 //不为最后一个，则有下一个元素，获取下一个位置的itemView
-                var newChildView = recycler.getViewForPosition(childViewPosition + 1)
+                val newChildView = recycler.getViewForPosition(childViewPosition + 1)
                 //添加到recyclerView最后面
                 addView(newChildView)
                 measureChildWithMargins(newChildView, 0, 0)
-                var newChildViewWidth = getDecoratedMeasuredWidth(newChildView)
-                var newChildViewHeight = getDecoratedMeasuredHeight(newChildView)
+                val newChildViewWidth = getDecoratedMeasuredWidth(newChildView)
+                val newChildViewHeight = getDecoratedMeasuredHeight(newChildView)
                 //根据新的itemView测量宽高将itemView布局到之前一个itemView的右面
                 layoutDecoratedWithMargins(
                     newChildView,
@@ -108,14 +108,14 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
     private fun recyclerView(dx: Int, recycler: RecyclerView.Recycler) {
         if (dx <= 0) {
             for (i in 0..childCount) {
-                var childView = getChildAt(i) ?: continue
+                val childView = getChildAt(i) ?: continue
                 if (childView.left > width) {
                     removeAndRecycleView(childView, recycler)
                 }
             }
         } else {
             for(i in 0..childCount) {
-                var childView = getChildAt(i) ?: continue
+                val childView = getChildAt(i) ?: continue
                 if(childView.right < 0) {
                     removeAndRecycleView(childView, recycler)
                 }

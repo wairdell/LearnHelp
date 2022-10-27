@@ -39,24 +39,6 @@ class MainActivity : AppCompatActivity() {
         btn_jetpack_paging.setOnClickListener { startActivity(Intent(MainActivity@this, PagingSampleActivity::class.java)) }
         btn_compose.setOnClickListener { startActivity(Intent(MainActivity@this, ComposeDemoActivity::class.java)) }
         btn_display.setOnClickListener { startActivity(Intent(MainActivity@this, DisplayActivity::class.java)) }
-        var tvImage = findViewById<TextView>(R.id.tv_image)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            tvImage.setOnClickListener {
-                var hashMap = HashMap<String, Any>()
-                hashMap["xx111"] = "cc"
-                hashMap["cc222"] = "bbb"
-                hashMap["9oionbh"] = "bbb"
-                hashMap["zzzccc"] = "bbb"
-                hashMap["ssdd"] = "bbb"
-                hashMap["ffcc"] = "bbb"
-                hashMap["123"] = "bbb"
-                hashMap["334"] = "bbb"
-                Log.e("TAG", "startTime = " + System.currentTimeMillis());
-                SaFormater().format(hashMap)
-                Log.e("TAG", "endTime = " + System.currentTimeMillis());
-                Log.e("TAG", "sign = " + hashMap.get("sign"));
-            }
-        };
     }
 
 }

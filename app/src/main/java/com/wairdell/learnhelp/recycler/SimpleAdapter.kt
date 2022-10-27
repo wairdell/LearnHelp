@@ -1,13 +1,8 @@
 package com.wairdell.learnhelp.recycler
 
-import android.graphics.Color
-import android.util.SparseArray
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import java.text.FieldPosition
-import java.util.*
 
 open abstract class SimpleAdapter<T>(val layoutId: Int) : RecyclerView.Adapter<SimpleViewHolder>() {
 

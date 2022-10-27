@@ -63,7 +63,7 @@ class CameraView @JvmOverloads constructor(
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        //animator.start()
+        animator.start()
     }
 
     override fun onDetachedFromWindow() {

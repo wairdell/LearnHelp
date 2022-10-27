@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
 
-    <com.wairdell.learnhelp.widget.FillTypeView
+    <com.wairdell.learnhelp.widget.FlowLetterView
+            android:id="@+id/flow_letter_view"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="match_parent" />
 
-    <com.wairdell.learnhelp.widget.CameraView
-            android:background="#00FF00"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+    <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-    <com.wairdell.learnhelp.widget.AnimatorView
-            android:background="#ff00ff"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+        <TextView
+                android:textColor="#C60000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/tv_image"
+                android:background="@drawable/xlx_voice_multiple_reward_loading_download_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <com.wairdell.learnhelp.widget.TickView
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+        <com.wairdell.learnhelp.widget.FillTypeView
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
 
-    <com.wairdell.learnhelp.widget.CheckView
-            android:layout_width="15dp"
-            android:layout_height="15dp" />
+        <com.wairdell.learnhelp.widget.CameraView
+                android:background="#00FF00"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
 
-    <ImageView
-            android:background="@drawable/xlx_voice_landing_redpacket_progress_select"
-            android:layout_width="15dp"
-            android:layout_height="15dp" />
+        <com.wairdell.learnhelp.widget.AnimatorView
+                android:background="#ff00ff"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
 
+        <com.wairdell.learnhelp.widget.TickView
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
 
-</com.google.android.material.chip.ChipGroup>
+        <com.wairdell.learnhelp.widget.CheckView
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+
+        <ImageView
+                android:background="@drawable/xlx_voice_landing_redpacket_progress_select"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</FrameLayout>
