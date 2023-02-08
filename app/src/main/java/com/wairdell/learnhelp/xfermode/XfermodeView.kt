@@ -15,8 +15,8 @@ class XfermodeView(context: Context?, attrs: AttributeSet?) : View(context, attr
     var touchPath: Path = Path()
     var paint: Paint = Paint()
 
-    var imageBitmap: Bitmap? = null
-    var imageCanvas: Canvas? = null
+    lateinit var imageBitmap: Bitmap
+    lateinit var imageCanvas: Canvas
 
     constructor(context: Context?) : this(context, null)
 
@@ -30,9 +30,8 @@ class XfermodeView(context: Context?, attrs: AttributeSet?) : View(context, attr
             strokeCap = Paint.Cap.ROUND
         }
         imageBitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher_test).copy(Bitmap.Config.ARGB_8888, true)
-        imageCanvas = Canvas(imageBitmap!!)
-        var imagePaint = Paint()
-        imagePaint?.apply {
+        imageCanvas = Canvas(imageBitmap)
+        val imagePaint = Paint().apply {
             /*shader = LinearGradient(
                 0f,
                 0f,
@@ -45,19 +44,17 @@ class XfermodeView(context: Context?, attrs: AttributeSet?) : View(context, attr
             color = Color.RED
             xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
         }
-        var rectF: RectF = RectF(0f, 0f, imageBitmap!!.width.toFloat(), imageBitmap!!.height.toFloat())
-        imageCanvas?.drawArc(rectF, 0f, 90f, true, imagePaint)
+        val rectF: RectF = RectF(0f, 0f, imageBitmap.width.toFloat(), imageBitmap.height.toFloat())
+        imageCanvas.drawArc(rectF, 0f, 90f, true, imagePaint)
         //imageCanvas?.drawRect(0f, 0f, imageBitmap!!.width.toFloat(), imageBitmap!!.height.toFloat(), imagePaint)
 
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        imageBitmap?.let {
-            canvas?.drawBitmap(it, 0f, 0f, null)
-        }
+        canvas.drawBitmap(imageBitmap, 0f, 0f, null)
         maskBitmap?.let {
-            canvas?.drawBitmap(it, 0f, 0f, null)
+            canvas.drawBitmap(it, 0f, 0f, null)
         }
 
     }
