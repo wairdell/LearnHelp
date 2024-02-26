@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.wairdell.learnhelp">
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.wairdell.learnhelp">
+
+
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- 添加快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 移除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 查询快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
 
     <application
             android:name=".App"
@@ -9,18 +21,21 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".bessel.BesselDemoActivity"/>
+        <activity android:name=".bessel.BesselDemoActivity" />
         <activity android:name=".interpolator.InterpolatorActivity" />
-        <activity android:name=".xfermode.XfermodeActivity" />
+        <activity
+                android:name=".xfermode.XfermodeActivity"
+                android:exported="true" />
         <activity android:name=".draghelper.ViewDragHelperActivity" />
         <activity android:name=".recycler.RecyclerViewActivity" />
         <activity android:name=".coordinator.CoordinatorLayoutActivity" />
@@ -29,6 +44,16 @@
         <activity android:name=".jetpack.paging.PagingSampleActivity" />
         <activity android:name=".compose.ComposeDemoActivity" />
         <activity android:name=".display.DisplayActivity" />
+        <activity android:name=".dispatch.DispatchActivity" />
+        <activity android:name=".fragment.FragmentMockActivity" />
+
+        <activity
+                android:name=".rotate.FirstActivity"
+                android:theme="@style/TransparentAppTheme" />
+        <activity
+                android:name=".rotate.SecondActivity"
+                android:theme="@style/TransparentAppTheme" />
+
     </application>
 
 </manifest>

@@ -1,3 +1,0 @@
-D:/Users/AndroidStudioProjects/LearnHelp/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/sabridge.dir
-D:/Users/AndroidStudioProjects/LearnHelp/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/Users/AndroidStudioProjects/LearnHelp/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir

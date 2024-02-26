@@ -3,17 +3,19 @@ package com.wairdell.learnhelp.xfermode
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wairdell.learnhelp.R
-import kotlinx.android.synthetic.main.activity_xfermode.*
+import com.wairdell.learnhelp.databinding.ActivityXfermodeBinding
 
 class XfermodeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_xfermode)
+        val binding = ActivityXfermodeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         var adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -28,8 +30,8 @@ class XfermodeActivity : AppCompatActivity() {
                 (holder.itemView as XfermodeDisplayView).mode = PorterDuff.Mode.values()[position]
             }
         }
-        recycler_view.layoutManager = GridLayoutManager(this, 4)
-        recycler_view.adapter = adapter
+        binding.recyclerView.layoutManager = GridLayoutManager(this, 4)
+        binding.recyclerView.adapter = adapter
     }
 
 }

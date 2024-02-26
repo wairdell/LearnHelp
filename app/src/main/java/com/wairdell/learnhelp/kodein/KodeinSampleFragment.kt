@@ -55,7 +55,7 @@ class KodeinSampleFragment : Fragment(), KodeinAware {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var rootView = FrameLayout(context!!)
+        var rootView = FrameLayout(requireContext())
         rootView.layoutParams = ViewGroup.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         rootView.setBackgroundColor(Color.parseColor("#FF0000"))
         return rootView

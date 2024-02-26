@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.wairdell.learnhelp.R
 import com.wairdell.learnhelp.common.ViewModelFactory
-import kotlinx.android.synthetic.main.activity_kodein_sample.*
+import com.wairdell.learnhelp.databinding.ActivityKodeinSampleBinding
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.KodeinContext
@@ -41,8 +41,9 @@ class KodeinSampleActivity : AppCompatActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val binding = ActivityKodeinSampleBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_kodein_sample)
-        btn_start.setOnClickListener {
+        binding.btnStart.setOnClickListener {
             for (i in 0..3) {
                 executorService.execute {
                     for (i in 0..4) {
@@ -52,7 +53,7 @@ class KodeinSampleActivity : AppCompatActivity(), KodeinAware {
             }
         }
 
-        btn_switch_fragment.setOnClickListener {
+        binding.btnSwitchFragment.setOnClickListener {
             var findFragmentByTag = supportFragmentManager.findFragmentByTag(KodeinSampleFragment.TAG)
             var transaction = supportFragmentManager.beginTransaction()
             if(findFragmentByTag == null) {

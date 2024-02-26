@@ -1,7 +1,0 @@
-Executable : D:\Users\changwei.zhang\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
-arguments : 
--C
-D:\Users\AndroidStudioProjects\LearnHelp\app\.cxx\cmake\debug\arm64-v8a
-sabridge
-jvmArgs : 
-

@@ -8,6 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="real_image">@drawable/ic_launcher_background</item>
     </style>
+    
+    <style name="TransparentAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--不设置activity进入和退出动画样式-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置窗口的背景是否为半透明，设置透明背景必须要设置此项-->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 
     <declare-styleable name="Halo">
         <attr name="haloShape">

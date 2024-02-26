@@ -104,7 +104,7 @@ class BesselAnimationView(context: Context?, attrs: AttributeSet?) : View(contex
         })
         valueAnimator.addListener(object : AnimatorListenerAdapter() {
 
-            override fun onAnimationRepeat(animation: Animator?) {
+            override fun onAnimationRepeat(animation: Animator) {
                 super.onAnimationRepeat(animation)
                 besselPath.reset()
                 besselPath.moveTo(startX, startY)

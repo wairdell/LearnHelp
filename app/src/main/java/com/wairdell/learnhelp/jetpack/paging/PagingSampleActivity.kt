@@ -5,22 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.wairdell.learnhelp.R
 import com.wairdell.learnhelp.common.ViewModelFactory
-import kotlinx.android.synthetic.main.activity_jetpack_paging.*
+import com.wairdell.learnhelp.databinding.ActivityJetpackPagingBinding
 
 class PagingSampleActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_jetpack_paging)
+        val binding = ActivityJetpackPagingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         val adapter = TestAdapter()
-        
-        recycler_view.adapter = adapter
+
+        binding.recyclerView.adapter = adapter
         val viewModel = ViewModelFactory.create(TestViewModel::class.java)
         viewModel.testList.observe(this, Observer {
-            refresh_layout.isRefreshing = false
+            binding.refreshLayout.isRefreshing = false
             adapter.submitList(it)
         })
-        refresh_layout.setOnRefreshListener {
+        binding.refreshLayout.setOnRefreshListener {
             viewModel.invalidateDataSource()
         }
     }

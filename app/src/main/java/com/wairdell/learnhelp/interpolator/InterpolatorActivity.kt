@@ -9,13 +9,14 @@ import androidx.core.view.get
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wairdell.learnhelp.R
-import kotlinx.android.synthetic.main.activity_interpolator.*
+import com.wairdell.learnhelp.databinding.ActivityInterpolatorBinding
 
 class InterpolatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_interpolator)
+        val binding = ActivityInterpolatorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         var list: List<Interpolator> = listOf(
             AccelerateDecelerateInterpolator(),
             AccelerateInterpolator(),
@@ -49,11 +50,11 @@ class InterpolatorActivity : AppCompatActivity() {
                 }
 
             }
-        recycler_view.layoutManager = GridLayoutManager(this, 2)
-        recycler_view.adapter = adapter
-        btn_start.setOnClickListener {
-            for (i in 0..recycler_view.childCount) {
-                (recycler_view.getChildAt(i) as InterpolatorExampleView?)?.startAni()
+        binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerView.adapter = adapter
+        binding.btnStart.setOnClickListener {
+            for (i in 0..binding.recyclerView.childCount) {
+                (binding.recyclerView.getChildAt(i) as InterpolatorExampleView?)?.startAni()
             }
         }
     }
