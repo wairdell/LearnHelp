@@ -12,7 +12,6 @@ import com.wairdell.learnhelp.display.DisplayActivity
 import com.wairdell.learnhelp.draghelper.ViewDragHelperActivity
 import com.wairdell.learnhelp.fragment.FragmentMockActivity
 import com.wairdell.learnhelp.interpolator.InterpolatorActivity
-import com.wairdell.learnhelp.jetpack.paging.PagingSampleActivity
 import com.wairdell.learnhelp.kodein.KodeinSampleActivity
 import com.wairdell.learnhelp.recycler.RecyclerViewActivity
 import com.wairdell.learnhelp.xfermode.XfermodeActivity
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnRecyclerView.setOnClickListener { startActivity(Intent(this, RecyclerViewActivity::class.java)) }
         binding.btnColorMatrix.setOnClickListener { startActivity(Intent(this, ColorMatrixActivity::class.java)) }
         binding.btnKodeinSample.setOnClickListener { startActivity(Intent(this, KodeinSampleActivity::class.java)) }
-        binding.btnJetpackPaging.setOnClickListener { startActivity(Intent(this, PagingSampleActivity::class.java)) }
+//        binding.btnJetpackPaging.setOnClickListener { startActivity(Intent(this, PagingSampleActivity::class.java)) }
         binding.btnCompose.setOnClickListener { startActivity(Intent(this, ComposeDemoActivity::class.java)) }
         binding.btnDisplay.setOnClickListener {
             startActivity(Intent(this, DisplayActivity::class.java))
