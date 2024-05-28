@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 
 /**
  *    author : fengqiao
@@ -15,9 +16,10 @@ class DispatchView @JvmOverloads constructor(context: Context, attrs: AttributeS
     View(context, attrs, defStyleAttr) {
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        Log.i("TAG", "view => onTouchEvent: " + event.action)
+        Log.i("Dispatch", "view => onTouchEvent: " + event.action)
         super.onTouchEvent(event)
         if (event.action == MotionEvent.ACTION_DOWN) {
+//            (parent as ViewGroup).requestDisallowInterceptTouchEvent(true)
             return true
         }
         return false

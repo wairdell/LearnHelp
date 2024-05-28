@@ -7,108 +7,116 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-            android:orientation="vertical"
+    <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-        <FrameLayout
+
+        <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-            <com.google.android.material.chip.ChipGroup
-                    android:focusableInTouchMode="true"
-                    android:focusable="true"
-                    android:id="@+id/root"
-                    android:orientation="vertical"
+            <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:context=".MainActivity">
+                    android:layout_height="match_parent">
 
-                <Button
-                        android:id="@+id/btn_bessel"
-                        android:text="贝塞尔曲线"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                <com.google.android.material.chip.ChipGroup
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:id="@+id/root"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context=".MainActivity">
 
-                <Button
-                        android:id="@+id/btn_interpolator"
-                        android:text="Interpolator"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_bessel"
+                            android:text="贝塞尔曲线"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:id="@+id/btn_xfermode"
-                        android:text="xfermode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_interpolator"
+                            android:text="Interpolator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:id="@+id/btn_drag_helper"
-                        android:text="ViewDragHelper"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_xfermode"
+                            android:text="xfermode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:id="@+id/btn_recycler_view"
-                        android:text="RecyclerView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_drag_helper"
+                            android:text="ViewDragHelper"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:id="@+id/btn_coordinator_layout"
-                        android:text="CoordinatorLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_recycler_view"
+                            android:text="RecyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:id="@+id/btn_color_matrix"
-                        android:text="ColorMatrix"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_coordinator_layout"
+                            android:text="CoordinatorLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="Kodein Sample"
-                        android:id="@+id/btn_kodein_sample"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:id="@+id/btn_color_matrix"
+                            android:text="ColorMatrix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="JETPACK PAGING"
-                        android:id="@+id/btn_jetpack_paging"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:text="Kodein Sample"
+                            android:id="@+id/btn_kodein_sample"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="Compose Sample"
-                        android:id="@+id/btn_compose"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:text="JETPACK PAGING"
+                            android:id="@+id/btn_jetpack_paging"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="Dispatch"
-                        android:id="@+id/btn_dispatch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:text="Compose Sample"
+                            android:id="@+id/btn_compose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="自定义 View"
-                        android:id="@+id/btn_display"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:text="Dispatch"
+                            android:id="@+id/btn_dispatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-                <Button
-                        android:text="Fragment"
-                        android:id="@+id/btn_fragment"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <Button
+                            android:text="自定义 View"
+                            android:id="@+id/btn_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-            </com.google.android.material.chip.ChipGroup>
+                    <Button
+                            android:text="Fragment"
+                            android:id="@+id/btn_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-        </FrameLayout>
+                </com.google.android.material.chip.ChipGroup>
+
+            </FrameLayout>
 
 
-    </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
 
 
 </ScrollView>

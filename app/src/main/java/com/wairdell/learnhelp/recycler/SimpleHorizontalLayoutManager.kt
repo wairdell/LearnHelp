@@ -1,16 +1,21 @@
 package com.wairdell.learnhelp.recycler
 
+import android.util.Log
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
+
+    companion object {
+        const val TAG = "SimpleHorizontalManager"
+    }
 
     override fun generateDefaultLayoutParams(): RecyclerView.LayoutParams {
         return RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
     override fun onLayoutChildren(recycler: RecyclerView.Recycler, state: RecyclerView.State) {
-        super.onLayoutChildren(recycler, state)
         //如果 itemCount 为0时没有任何 itemView 直接返回
         if (itemCount <= 0) {
             return
@@ -121,6 +126,32 @@ class SimpleHorizontalLayoutManager : RecyclerView.LayoutManager() {
                 }
             }
         }
+    }
+
+    override fun onFocusSearchFailed(
+        focused: View,
+        direction: Int,
+        recycler: RecyclerView.Recycler,
+        state: RecyclerView.State
+    ): View? {
+        Log.d(
+            TAG,
+            "onFocusSearchFailed() called with: focused = $focused, direction = $direction, recycler = $recycler, state = $state"
+        )
+        return super.onFocusSearchFailed(focused, direction, recycler, state)
+    }
+
+    override fun collectAdjacentPrefetchPositions(
+        dx: Int,
+        dy: Int,
+        state: RecyclerView.State?,
+        layoutPrefetchRegistry: LayoutPrefetchRegistry?
+    ) {
+        Log.d(
+            TAG,
+            "collectAdjacentPrefetchPositions() called with: dx = $dx, dy = $dy, state = $state, layoutPrefetchRegistry = $layoutPrefetchRegistry"
+        )
+        super.collectAdjacentPrefetchPositions(dx, dy, state, layoutPrefetchRegistry)
     }
 
     //可以水平滑动

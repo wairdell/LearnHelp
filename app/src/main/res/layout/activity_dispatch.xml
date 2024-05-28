@@ -8,12 +8,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_width="300dp"
+            android:background="#00FF00"
             android:layout_height="300dp">
 
         <com.wairdell.learnhelp.dispatch.DispatchView
                 android:background="#FF0000"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
 
     </com.wairdell.learnhelp.dispatch.DispatchViewGroup>
 

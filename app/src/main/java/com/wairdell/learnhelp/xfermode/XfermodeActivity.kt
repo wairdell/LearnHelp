@@ -3,11 +3,9 @@ package com.wairdell.learnhelp.xfermode
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.ViewGroup
-import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wairdell.learnhelp.R
 import com.wairdell.learnhelp.databinding.ActivityXfermodeBinding
 
 class XfermodeActivity : AppCompatActivity() {

@@ -8,6 +8,7 @@ import com.wairdell.learnhelp.colormatrix.ColorMatrixActivity
 import com.wairdell.learnhelp.compose.ComposeDemoActivity
 import com.wairdell.learnhelp.coordinator.CoordinatorLayoutActivity
 import com.wairdell.learnhelp.databinding.ActivityMainBinding
+import com.wairdell.learnhelp.dispatch.DispatchActivity
 import com.wairdell.learnhelp.display.DisplayActivity
 import com.wairdell.learnhelp.draghelper.ViewDragHelperActivity
 import com.wairdell.learnhelp.fragment.FragmentMockActivity
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnCompose.setOnClickListener { startActivity(Intent(this, ComposeDemoActivity::class.java)) }
         binding.btnDisplay.setOnClickListener {
             startActivity(Intent(this, DisplayActivity::class.java))
+        }
+        binding.btnDispatch.setOnClickListener {
+            startActivity(Intent(this, DispatchActivity::class.java))
         }
         binding.btnFragment.setOnClickListener {
             startActivity(Intent(this, FragmentMockActivity::class.java))
